@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">AMAS</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_about_us">About us</string>
+    <string name="title_forgot_password">Forgot Password</string>
+    <string name="title_attendence">Attendance</string>
+    <string name="title_task">Task</string>
+    <string name="title_login">Login</string>
+    <string name="title_contact_us">Contact us</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Exit Fragment -->
+    <string name="dialogue_exit">Are you sure?</string>
+    <string name="positive_button_Yes">Yes</string>
+    <string name="negative_button_No">No</string>
+    <string name="title_activity_track">Map</string>
+
+    <string name="about_us">AMAS or the Automated Mobile Attendance System is an android application which targets at making the attendance system automated. It tracks the position of staff and students via GPS services and marks their attendance based on their location. This system is developed to be portable, with the ability to automatically the sync attendance with the online server, besides having additional functionality.</string>
+</resources>

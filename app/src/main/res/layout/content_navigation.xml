@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.android.amas.NavigationActivity"
+    tools:showIn="@layout/app_bar_navigation">
+
+
+    <TextView
+        android:id="@+id/WelcomeUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:text="Welcome User"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/UserIDTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_below="@+id/WelcomeUser"
+        android:text="User ID: "
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/UserIDDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_below="@+id/WelcomeUser"
+        android:layout_toRightOf="@+id/UserIDTag"
+        android:text="User ID"
+        android:textSize="30sp" />
+
+
+    <TextView
+        android:id="@+id/UserPrivilegeTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Privilege: "
+        android:layout_below="@+id/UserIDTag"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/UserPrivilegeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/UserPrivilegeTag"
+        android:layout_alignBottom="@+id/UserPrivilegeTag"
+        android:layout_toEndOf="@+id/UserIDTag"
+        android:layout_toRightOf="@+id/UserIDTag"
+        android:text="HOD/Faculty/Student"
+        android:textSize="30sp" />
+
+
+</RelativeLayout>

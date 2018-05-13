@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_attendance"
+            android:title="Attendance" />
+        <item
+            android:id="@+id/nav_track"
+            android:title="Track/Locate" />
+        <item
+            android:id="@+id/nav_notification"
+            android:title="Notification" />
+        <item
+            android:id="@+id/nav_task"
+            android:title="Task" />
+        <item
+            android:id="@+id/nav_report"
+            android:title="Report" />
+    </group>
+
+    <item android:title="Miscellaneous">
+        <menu>
+            <item
+            android:id="@+id/nav_feedback"
+            android:title="Feedback" />
+            <item
+            android:id="@+id/nav_help"
+            android:title="Help" />
+            <item
+                android:id="@+id/nav_about"
+                android:title="About Us" />
+            <item
+                android:id="@+id/nav_contact"
+                android:title="Contact Us" />
+            <item
+                android:id="@+id/nav_exit"
+                android:title="Exit" />
+        </menu>
+    </item>
+</menu>

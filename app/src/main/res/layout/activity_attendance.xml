@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.amas.AttendanceActivity">
+
+    <TextView
+        android:id="@+id/datepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20dp"
+        android:text="Date: "
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/classroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/datepicker"
+        android:layout_margin="20dp"
+        android:text="Classroom: "
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/staffname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/classroom"
+        android:layout_alignRight="@+id/classroom"
+        android:layout_below="@+id/classroom"
+        android:text="Staff name: "
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/staffname"
+        android:layout_margin="20dp"
+        android:text="Subject: "
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/present"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subject"
+        android:layout_margin="20dp"
+        android:text="Present: "
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/absent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/present"
+        android:layout_margin="20dp"
+        android:text="Absent: "
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/datepickerbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/datepicker"
+        android:layout_alignBottom="@+id/datepicker"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="46dp"
+        android:text="Date Picker" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/classroom"
+        android:layout_alignBottom="@+id/classroom"
+        android:layout_alignLeft="@+id/datepickerbutton"
+        android:layout_alignStart="@+id/datepickerbutton"
+        android:text="Classroom" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignTop="@+id/staffname"
+        android:text="Staff name" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/subject"
+        android:layout_alignBottom="@+id/subject"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:text="Subject" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/present"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:text="No. of present" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/absent"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:text="No. of absent" />
+
+
+</RelativeLayout>

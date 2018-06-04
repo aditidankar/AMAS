@@ -51,6 +51,7 @@ public class StaffLoginActivity extends AppCompatActivity {
                 {
                     Call<List<RetrofitArrayData>> call = retrofitApiInterface.StaffLogin(LoginID.getText().toString(),Password.getText().toString());
                     call.enqueue(new Callback<List<RetrofitArrayData>>() {
+                        String loginid = LoginID.getText().toString();
                         @Override
                         public void onResponse(Call<List<RetrofitArrayData>> call, Response<List<RetrofitArrayData>> response) {
                             //Toast.makeText(getApplicationContext(),response.body().get(0).getCode(),Toast.LENGTH_LONG).show();
@@ -68,6 +69,8 @@ public class StaffLoginActivity extends AppCompatActivity {
                                             @Override
                                             public void onClick(DialogInterface dialogInterface, int i) {
                                                 Intent intent = new Intent(getApplicationContext(), NavigationActivity.class);
+                                                intent.putExtra("LoginID", loginid);
+                                                intent.putExtra("Privilege", "Staff");
                                                 startActivity(intent);
                                                 dialogInterface.dismiss();
                                                 finish();
@@ -80,8 +83,8 @@ public class StaffLoginActivity extends AppCompatActivity {
                             }
                             else {
                                 new android.support.v7.app.AlertDialog.Builder(StaffLoginActivity.this)
-                                        .setTitle("Login UnSuccessful")
-                                        .setMessage("Invalid UserId or Password")
+                                        .setTitle("Login Failed")
+                                        .setMessage("Invalid User ID or Password")
                                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialogInterface, int i) {

@@ -11,7 +11,7 @@
 
 
     <TextView
-        android:id="@+id/WelcomeUser"
+        android:id="@+id/tvWelcomeUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -21,45 +21,45 @@
         android:textSize="40sp" />
 
     <TextView
-        android:id="@+id/UserIDTag"
+        android:id="@+id/tvUserIDTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:layout_marginRight="32dp"
-        android:layout_below="@+id/WelcomeUser"
+        android:layout_below="@+id/tvWelcomeUser"
         android:text="User ID: "
         android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/UserIDDisplay"
+        android:id="@+id/tvUserIDDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:layout_below="@+id/WelcomeUser"
-        android:layout_toRightOf="@+id/UserIDTag"
-        android:text="User ID"
-        android:textSize="30sp" />
+        android:layout_below="@+id/tvWelcomeUser"
+        android:layout_toRightOf="@+id/tvUserIDTag"
+        android:textSize="30sp"
+        android:textColor="#37474F"/>
 
 
     <TextView
-        android:id="@+id/UserPrivilegeTag"
+        android:id="@+id/tvUserPrivilegeTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="Privilege: "
-        android:layout_below="@+id/UserIDTag"
+        android:layout_below="@+id/tvUserIDTag"
         android:textSize="32sp" />
 
     <TextView
-        android:id="@+id/UserPrivilegeDisplay"
+        android:id="@+id/tvUserPrivilegeDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/UserPrivilegeTag"
-        android:layout_alignBottom="@+id/UserPrivilegeTag"
-        android:layout_toEndOf="@+id/UserIDTag"
-        android:layout_toRightOf="@+id/UserIDTag"
-        android:text="HOD/Faculty/Student"
-        android:textSize="30sp" />
+        android:layout_alignBaseline="@+id/tvUserPrivilegeTag"
+        android:layout_alignBottom="@+id/tvUserPrivilegeTag"
+        android:layout_toEndOf="@+id/tvUserIDTag"
+        android:layout_toRightOf="@+id/tvUserIDTag"
+        android:textSize="30sp"
+        android:textColor="#37474F"/>
 
 
 </RelativeLayout>

@@ -19,10 +19,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private TextView tvUserID;
+    private TextView tvUserPrivilege;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +52,16 @@ public class NavigationActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Intent intent = getIntent();
+        String loginid = intent.getStringExtra("LoginID");
+        String privilege = intent.getStringExtra("Privilege");
+
+        tvUserID = findViewById(R.id.tvUserIDDisplay);
+        tvUserID.setText(loginid);
+
+        tvUserPrivilege = findViewById(R.id.tvUserPrivilegeDisplay);
+        tvUserPrivilege.setText(privilege);
 
     }
 

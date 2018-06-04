@@ -12,7 +12,10 @@
             android:title="Attendance" />
         <item
             android:id="@+id/nav_track"
-            android:title="Track/Locate" />
+            android:title="Track" />
+        <item
+            android:id="@+id/nav_locate"
+            android:title="Locate" />
         <item
             android:id="@+id/nav_notification"
             android:title="Notification" />

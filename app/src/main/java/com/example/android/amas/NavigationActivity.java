@@ -103,6 +103,10 @@ public class NavigationActivity extends AppCompatActivity
             Intent intent = new Intent(NavigationActivity.this, TrackActivity.class);
             startActivity(intent);
 
+        } else if (id == R.id.nav_locate) {
+            Intent intent = new Intent(NavigationActivity.this, LocateActivity.class);
+            startActivity(intent);
+
         } else if (id == R.id.nav_notification) {
 
         } else if (id == R.id.nav_task) {

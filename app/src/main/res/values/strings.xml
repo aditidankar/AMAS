@@ -28,4 +28,5 @@
     <string name="title_activity_track">Map</string>
 
     <string name="about_us">AMAS or the Automated Mobile Attendance System is an android application which targets at making the attendance system automated. It tracks the position of staff and students via GPS services and marks their attendance based on their location. This system is developed to be portable, with the ability to automatically the sync attendance with the online server, besides having additional functionality.</string>
+    <string name="title_activity_locate">Map</string>
 </resources>

@@ -1,5 +1,7 @@
 package com.example.android.amas;
 
+import android.util.Log;
+
 import com.google.gson.annotations.SerializedName;
 
 public class RetrofitArrayData {
@@ -12,6 +14,13 @@ public class RetrofitArrayData {
     @SerializedName("status")
     private String Status;
 
+    @SerializedName("fname")
+    private String Fname;
+
+    @SerializedName("lname")
+    private String Lname;
+
+
     public String getUserID() {
         return UserID;
     }
@@ -22,5 +31,13 @@ public class RetrofitArrayData {
 
     public String getStatus() {
         return Status;
+    }
+
+    public String getFname(){
+        return Fname;
+    }
+
+    public String getLname() {
+        return Lname;
     }
 }

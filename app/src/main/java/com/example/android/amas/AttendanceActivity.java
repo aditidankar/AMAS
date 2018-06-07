@@ -11,43 +11,30 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.TextView;
 import android.widget.TimePicker;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class AttendanceActivity extends AppCompatActivity {
-    Button btnDatepicker;
-    Dialog myDialog;
-    Context context;
+
+    private TextView tvDate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance);
 
-        btnDatepicker=(Button)findViewById(R.id.datepickerbutton);
-        //myDialog=new Dialog(getApplicationContext());
-        //myDialog.setContentView(R.layout.time_picker);
-        //myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        tvDate = findViewById(R.id.tvDate);
 
-        btnDatepicker.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               // myDialog.show();
-            }
-        });
+        Date today = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String dateToStr = dateFormat.format(today);
 
-        /*DatePickerDialog.OnDateSetListener myDateListener = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                int yearSelected  = year;
-                //int monthSele
-            }
-        };
+        tvDate.setText(dateToStr);
 
-        TimePickerDialog.OnTimeSetListener myTimeListener = new TimePickerDialog.OnTimeSetListener() {
-            @Override
-            public void onTimeSet(TimePicker timePicker, int hours, int minutes) {
-
-            }
-        };*/
     }
-
 }

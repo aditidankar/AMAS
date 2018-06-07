@@ -27,6 +27,9 @@ public class NavigationActivity extends AppCompatActivity
 
     private TextView tvUserID;
     private TextView tvUserPrivilege;
+    private TextView tvUserName;
+
+    private int pCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,12 +58,18 @@ public class NavigationActivity extends AppCompatActivity
 
         Intent intent = getIntent();
         String loginid = intent.getStringExtra("LoginID");
+        String userName = intent.getStringExtra("UserName");
         String privilege = intent.getStringExtra("Privilege");
+        String privilegeCode = intent.getStringExtra("PrivilegeCode");
+        pCode = Integer.parseInt(privilegeCode);
 
-        tvUserID = findViewById(R.id.tvUserIDDisplay);
+        tvUserID = findViewById(R.id.tvUserID);
         tvUserID.setText(loginid);
 
-        tvUserPrivilege = findViewById(R.id.tvUserPrivilegeDisplay);
+        tvUserName = findViewById(R.id.tvUserName);
+        tvUserName.setText(userName);
+
+        tvUserPrivilege = findViewById(R.id.tvUserPrivilege);
         tvUserPrivilege.setText(privilege);
 
     }
@@ -105,13 +114,15 @@ public class NavigationActivity extends AppCompatActivity
 
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
-            Intent intent = new Intent(NavigationActivity.this, NavigationActivity.class);
-            startActivity(intent);
-            finish();
-        } else if (id == R.id.nav_attendance) {
-            Intent intent = new Intent(NavigationActivity.this, AttendanceActivity.class);
-            startActivity(intent);
+
+        if (id == R.id.nav_attendance) {
+            if (pCode == 0){
+                Intent intent = new Intent(NavigationActivity.this, AttendanceActivity.class);
+                startActivity(intent);
+            } else {
+                Intent intent = new Intent(NavigationActivity.this, AttendanceStudentActivity.class);
+                startActivity(intent);
+            }
 
         } else if (id == R.id.nav_track) {
             Intent intent = new Intent(NavigationActivity.this, TrackActivity.class);

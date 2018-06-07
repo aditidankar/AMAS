@@ -53,7 +53,10 @@ public class StudentLoginActivity extends AppCompatActivity {
                         public void onResponse(Call<List<RetrofitArrayData>> call, Response<List<RetrofitArrayData>> response) {
                             //Toast.makeText(getApplicationContext(),response.body().get(0).getCode(),Toast.LENGTH_LONG).show();
                             if (response.body().get(0).getStatus().equals("successful")) {
-                                String pass=response.body().get(0).getPassword();
+                                //String pass=response.body().get(0).getPassword();
+                                String fname=response.body().get(0).getFname();
+                                String lname=response.body().get(0).getLname();
+                                final String name = fname + " " + lname;
 
                                 /*Intent intent = new Intent(StudentLoginActivity.this , NavigationActivity.class);
                                 startActivity(intent);
@@ -67,7 +70,9 @@ public class StudentLoginActivity extends AppCompatActivity {
                                             public void onClick(DialogInterface dialogInterface, int i) {
                                                 Intent intent = new Intent(getApplicationContext(), NavigationActivity.class);
                                                 intent.putExtra("LoginID", loginid);
+                                                intent.putExtra("UserName", name);
                                                 intent.putExtra("Privilege", "Student");
+                                                intent.putExtra("PrivilegeCode", "1");
                                                 startActivity(intent);
                                                 dialogInterface.dismiss();
                                                 finish();

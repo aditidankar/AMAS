@@ -91,7 +91,8 @@
         <activity android:name=".HelpActivity" />
         <activity
             android:name=".LocateActivity"
-            android:label="@string/title_activity_locate"></activity>
+            android:label="@string/title_activity_locate" />
+        <activity android:name=".AttendanceStudentActivity"></activity>
     </application>
 
 </manifest>

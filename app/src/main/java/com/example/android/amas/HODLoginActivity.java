@@ -7,6 +7,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,9 +55,17 @@ public class HODLoginActivity extends AppCompatActivity {
                         String loginid = LoginID.getText().toString();
                         @Override
                         public void onResponse(Call<List<RetrofitArrayData>> call, Response<List<RetrofitArrayData>> response) {
-                            Toast.makeText(getApplicationContext(),response.body().get(0).getStatus(),Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getApplicationContext(),response.body().get(0).getStatus(),Toast.LENGTH_LONG).show();
                             if (response.body().get(0).getStatus().equals("successful")) {
-                                String pass=response.body().get(0).getPassword();
+                                //String pass=response.body().get(0).getPassword();
+                                String fname=response.body().get(0).getFname();
+                                String lname=response.body().get(0).getLname();
+                                final String name = fname + " " + lname;
+                                Log.d("Credential", "getStatus: " + response.body().get(0).getStatus());
+                                Log.d("Credential", "getUserID: " + response.body().get(0).getUserID());
+                                Log.d("Credential", "getPassword: " + response.body().get(0).getPassword());
+                                Log.d("Credential", "getFname: " + response.body().get(0).getFname());
+                                Log.d("Credential", "getLname: " + response.body().get(0).getLname());
 
                                 /*Intent intent = new Intent(HODLoginActivity.this , NavigationActivity.class);
                                 startActivity(intent);
@@ -70,7 +79,9 @@ public class HODLoginActivity extends AppCompatActivity {
                                             public void onClick(DialogInterface dialogInterface, int i) {
                                                 Intent intent = new Intent(getApplicationContext(), NavigationActivity.class);
                                                 intent.putExtra("LoginID", loginid);
+                                                intent.putExtra("UserName", name);
                                                 intent.putExtra("Privilege", "HOD");
+                                                intent.putExtra("PrivilegeCode", "0");
                                                 startActivity(intent);
                                                 dialogInterface.dismiss();
                                                 finish();

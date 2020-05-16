@@ -1,7 +1,7 @@
 # AMAS
 ## Automated Mobile Attendance System
 
-This is an android application built to help universities and colleges to automate their attendance system in classrooms.
+This is an android application built to help universities and colleges automate their attendance system in classrooms.
 
 A. Dankar and P. P. Kundapur, "Automated Mobile Attendance System (AMAS)," 2019 International Conference on Advances in Computing, Communication and Control (ICAC3), Mumbai, India, 2019, pp. 1-6, doi: 10.1109/ICAC347590.2019.9036787.
 

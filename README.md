@@ -3,7 +3,7 @@
 
 This is an android application built to help universities and colleges automate their attendance system in classrooms.
 
-Keywords: Android Studio, Java, XML, GPS, Geofencing, Bluetooth Low Engery (BLE), IMEI, WAMP, MySQL
+Technologies used: Java, XML, GPS, Geofencing, Bluetooth Low Engery (BLE), IMEI, WAMP, MySQL, Android Studio
 
 
 

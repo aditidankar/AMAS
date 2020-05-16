@@ -5,7 +5,7 @@ This is an android application built to help universities and colleges automate 
 
 Technologies used: Java, XML, GPS, Geofencing, Bluetooth Low Engery (BLE), IMEI, WAMP, MySQL, Android Studio
 
-
+#
 
 A. Dankar and P. P. Kundapur, "Automated Mobile Attendance System (AMAS)," 2019 International Conference on Advances in Computing, Communication and Control (ICAC3), Mumbai, India, 2019, pp. 1-6, doi: 10.1109/ICAC347590.2019.9036787.
 
